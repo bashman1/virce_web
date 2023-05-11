@@ -9,8 +9,10 @@
 
 	  if (scroll >= box - header) {
 	    $("header").addClass("background-header");
+		$('#logolVariable').attr('src', 'assets/images/VIRCE.png');
 	  } else {
 	    $("header").removeClass("background-header");
+		$('#logolVariable').attr('src', 'assets/images/VIRCE-WHITE.png');
 	  }
 	});
 	
