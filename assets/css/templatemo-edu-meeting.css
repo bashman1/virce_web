@@ -1448,6 +1448,16 @@ section.contact-us .right-info ul li span {
   color: #f5a425;
 }
 
+.content-justified{
+  text-align: justify !important;
+}
+
+.main-graphical{
+  background-image: linear-gradient(to right, #ff0000, #00ff00); /* Replace with your desired gradient or background image */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 
 /*
 ---------------------------------------------
