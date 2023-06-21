@@ -1855,3 +1855,18 @@ responsive
   }
 
 }
+
+
+/* additional css */
+.business-category{
+  font-size: 13px;
+  color: #EE2324 !important;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.business-connect a{
+ width: 100% !important;
+ margin-top:20px;
+ text-align: center !important;
+}

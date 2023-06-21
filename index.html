@@ -182,7 +182,7 @@ https://templatemo.com/tm-569-edu-meeting
 
             <div class="item">
               <div class="icon">
-                <img src="assets/images/cash.png" alt="">
+                <img src="assets/images/finance.png" alt="">
               </div>
               <div class="down-content">
                 <h4>Virce Financial Services </h4>
@@ -194,7 +194,7 @@ https://templatemo.com/tm-569-edu-meeting
 
             <div class="item">
               <div class="icon">
-                <img src="assets/images/cash.png" alt="">
+                <img src="assets/images/crowfunding.png" alt="">
               </div>
               <div class="down-content">
                 <h4>Virce Community & Social </h4>
@@ -268,16 +268,32 @@ https://templatemo.com/tm-569-edu-meeting
 
         <div class="col-lg-12">
 
-          <div class="owl-service-item owl-carousel">
-
+          <div id="businessContent" class="owl-service-item owl-carousel">
             <div class="item">
               <div class="row">
                 <div class="col-lg-12">
                   <div class="meeting-item">
                     <div class="thumb">
-                      <!-- <div class="price">
-                        <span>$22.00</span>
-                      </div> -->
+                      <a href="meeting-details.html"><img src="assets/images/businessLogoRed.png" alt="Business"></a>
+                    </div>
+                    <div class="down-content content-justified">
+                      <p class="business-category">Category: Virce Business</p>
+                      <p>Service: IT Consultant</p>
+                      <p>Name: David Kajob</p>
+                        <div class="main-button-red business-connect">
+                          <div><a href="#" >Connect Now</a></div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- <div class="item">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="meeting-item">
+                    <div class="thumb">
                       <a href="meeting-details.html"><img src="assets/images/businessLogoRed.png" alt="Business"></a>
                     </div>
                     <div class="down-content content-justified">
@@ -291,16 +307,14 @@ https://templatemo.com/tm-569-edu-meeting
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
 
-            <div class="item">
+            <!-- <div class="item">
               <div class="row">
                 <div class="col-lg-12">
                   <div class="meeting-item">
                     <div class="thumb">
-                      <!-- <div class="price">
-                        <span>$22.00</span>
-                      </div> -->
+                  
                       <a href="meeting-details.html"><img src="assets/images/businessLogoRed.png" alt="Business"></a>
                     </div>
                     <div class="down-content content-justified">
@@ -314,16 +328,14 @@ https://templatemo.com/tm-569-edu-meeting
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
 
-            <div class="item">
+            <!-- <div class="item">
               <div class="row">
                 <div class="col-lg-12">
                   <div class="meeting-item">
                     <div class="thumb">
-                      <!-- <div class="price">
-                        <span>$22.00</span>
-                      </div> -->
+                
                       <a href="meeting-details.html"><img src="assets/images/businessLogoRed.png" alt="Business"></a>
                     </div>
                     <div class="down-content content-justified">
@@ -337,16 +349,14 @@ https://templatemo.com/tm-569-edu-meeting
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
 
-            <div class="item">
+            <!-- <div class="item">
               <div class="row">
                 <div class="col-lg-12">
                   <div class="meeting-item">
                     <div class="thumb">
-                      <!-- <div class="price">
-                        <span>$22.00</span>
-                      </div> -->
+                      
                       <a href="meeting-details.html"><img src="assets/images/businessLogoRed.png" alt="Business"></a>
                     </div>
                     <div class="down-content content-justified">
@@ -360,16 +370,14 @@ https://templatemo.com/tm-569-edu-meeting
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
 
-            <div class="item">
+            <!-- <div class="item">
               <div class="row">
                 <div class="col-lg-12">
                   <div class="meeting-item">
                     <div class="thumb">
-                      <!-- <div class="price">
-                        <span>$22.00</span>
-                      </div> -->
+                 
                       <a href="meeting-details.html"><img src="assets/images/businessLogoRed.png" alt="Business"></a>
                     </div>
                     <div class="down-content content-justified">
@@ -383,31 +391,7 @@ https://templatemo.com/tm-569-edu-meeting
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div class="item">
-              <div class="row">
-                <div class="col-lg-12">
-                  <div class="meeting-item">
-                    <div class="thumb">
-                      <!-- <div class="price">
-                        <span>$22.00</span>
-                      </div> -->
-                      <a href="meeting-details.html"><img src="assets/images/businessLogoRed.png" alt="Business"></a>
-                    </div>
-                    <div class="down-content content-justified">
-                      <div class="date content-justified">
-                        <h6 class="content-justified">Category: Virce Business</h6>
-                      </div>
-                      <p class="content-justified">Service: IT Consultant</p>
-                      <h4 class="content-justified">Name: David Kajob </h4>
-                      <p>Connect Now</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
+            </div> -->
 
           </div>
 
@@ -1121,31 +1105,69 @@ https://templatemo.com/tm-569-edu-meeting
         event.preventDefault(); // Prevent the default form submission
 
         // Serialize the form data
-        var formData = $(this).serialize();
+        // var formData = $(this).serialize();
 
+        let formData = {
+          name: $('[name="name"]').val(),
+          email: $('[name="email"]').val(),
+          subject: $('[name="subject"]').val(),
+          country: $('[name="country"]').val(),
+          phoneNumber: $('[name="phoneNumber"]').val(),
+          message: $('[name="message"]').val(),
+          status: "Active",
+        };
 
+        formData = JSON.stringify(formData);
         // Send an AJAX request to the server
-        alert(JSON.stringify(formData));
+        // alert(JSON.stringify(formData));
         console.log(formData);
-        // $.ajax({
-        //   type: 'POST',
-        //   url: 'your-server-url',
-        //   data: formData,
-        //   success: function(response) {
-        //     // Handle the success response
-        //     console.log('Form submitted successfully');
-        //     console.log(response);
-        //   },
-        //   error: function(xhr, status, error) {
-        //     // Handle the error response
-        //     console.log('Form submission failed');
-        //     console.log(xhr.responseText);
-        //   }
-        // });
+        
+
+        // $('#contact').trigger("reset");
+        // $("#contact").get(0).reset()
+        // $('#contact')[0].reset();
+        $.ajax({
+          type: 'POST',
+          url: 'http://localhost:8000/api/contact-us',
+          data: formData,
+          contentType: 'application/json',
+          success: function(response) {
+            $('input[name="name"]').val("");
+            $('input[name="email"]').val("");
+            $('input[name="subject"]').val("");
+            $('input[name="country"]').val("");
+            $('input[name="phoneNumber"]').val("");
+            $('input[name="message"]').val(""); 
+            alert(response.message);
+          },
+          error: function(xhr, status, error) {
+            // Handle the error response
+            // console.log('Form submission failed');
+     
+          }
+        });
       });
     });
 
 
+    $(document).ready(function (){
+
+      $.ajax({
+          dataType: 'json',
+          type: 'GET',
+          url: 'http://localhost:8000/api/web-business',
+          contentType: 'application/json; charset=utf-8',
+          success: function(response) {
+            // Handle the success response
+          $("#businessContent").html(response.data);
+            console.log(response);
+          },
+          error: function(xhr, status, error) {
+          }
+        });
+
+
+    });
 
     $(document).ready(function () {
         // Send an AJAX request to the server
@@ -1172,9 +1194,6 @@ https://templatemo.com/tm-569-edu-meeting
             console.log(response);
           },
           error: function(xhr, status, error) {
-            // Handle the error response
-            // console.log('Form submission failed');
-            // console.log(xhr.responseText);
           }
         });
 
